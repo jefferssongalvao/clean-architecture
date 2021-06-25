@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Tests;
+namespace CleanArchitecture\Tests\Unit;
 
 use CleanArchitecture\Email;
 use InvalidArgumentException;

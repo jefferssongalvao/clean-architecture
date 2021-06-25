@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"CleanArchitecture\\Tests\\CpfTest::testInvalidCPFThrowsException":0.002,"CleanArchitecture\\Tests\\CpfTest::testValidCPFAsString":0,"CleanArchitecture\\Tests\\EmailTest::testInvalidEmailThrowsException":0.001,"CleanArchitecture\\Tests\\EmailTest::testValidEmailAsString":0}}

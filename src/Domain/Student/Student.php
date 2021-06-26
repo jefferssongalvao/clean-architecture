@@ -4,7 +4,9 @@ namespace CleanArchitecture\Domain\Student;
 
 use CleanArchitecture\Domain\CPF;
 use CleanArchitecture\Domain\Email;
+use CleanArchitecture\Domain\Password\Password;
 use CleanArchitecture\Domain\Phone;
+use CleanArchitecture\Infrastructure\StringEncryptorDefault;
 
 class Student
 {
@@ -13,6 +15,7 @@ class Student
     private Email $email;
     /** @var Phone[] */
     private array $phones;
+    private Password $password;
 
     private function __construct(CPF $cpf, string $name, Email $email)
     {
@@ -25,6 +28,12 @@ class Student
     public static function withCpfNameEmail(string $cpf, string $name, string $email): self
     {
         return new Student(new CPF($cpf), $name, new Email($email));
+    }
+
+    public function withPassword(string $password): self
+    {
+        $this->password = new Password($password);
+        return $this;
     }
 
     public function addPhone(string $ddd, string $number): self
@@ -46,6 +55,11 @@ class Student
     public function email(): Email
     {
         return $this->email;
+    }
+
+    public function password(): string
+    {
+        return $this->password;
     }
 
     /**

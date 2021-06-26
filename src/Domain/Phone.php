@@ -1,8 +1,6 @@
 <?php
 
-namespace CleanArchitecture;
-
-use InvalidArgumentException;
+namespace CleanArchitecture\Domain;
 
 class Phone
 {
@@ -14,6 +12,16 @@ class Phone
         $this->setNumber($number);
     }
 
+    public function ddd(): string
+    {
+        return $this->ddd;
+    }
+
+    public function number(): string
+    {
+        return $this->number;
+    }
+
     public function __toString(): string
     {
         return "({$this->ddd}) {$this->formatNumber($this->number)}";
@@ -22,14 +30,14 @@ class Phone
     private function setDDD(string $ddd): void
     {
         if (strlen($ddd) !== 2)
-            throw new InvalidArgumentException("DDD Invalid");
+            throw new \InvalidArgumentException("DDD Invalid");
         $this->ddd = $ddd;
     }
 
     private function setNumber(string $number): void
     {
         if (strlen($number) < 8 || strlen($number) > 9)
-            throw new InvalidArgumentException("Number Invalid");
+            throw new \InvalidArgumentException("Number Invalid");
         $this->number = $number;
     }
 

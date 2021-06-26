@@ -1,8 +1,6 @@
 <?php
 
-namespace CleanArchitecture;
-
-use InvalidArgumentException;
+namespace CleanArchitecture\Domain;
 
 class CPF
 {
@@ -14,15 +12,16 @@ class CPF
 
     private function setCPF(string $cpf): void
     {
+        $cpf = preg_replace('/[^0-9]/is', '', $cpf);
+
         if ($this->validateCPF($cpf) === false)
-            throw new InvalidArgumentException("CPF Invalid!");
+            throw new \InvalidArgumentException("CPF Invalid!");
+
         $this->cpf = $cpf;
     }
 
     private function validateCPF($cpf): bool
     {
-        $cpf = preg_replace('/[^0-9]/is', '', $cpf);
-
         if (strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)) {
             return false;
         }
@@ -42,6 +41,7 @@ class CPF
 
     public function __toString(): string
     {
-        return $this->cpf;
+        $cpf = $this->cpf;
+        return substr($cpf, 0, 3) . "." . substr($cpf, 3, 3) . "." . substr($cpf, 6, 3) . "-" . substr($cpf, 9, 2);
     }
 }

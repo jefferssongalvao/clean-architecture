@@ -1,8 +1,6 @@
 <?php
 
-namespace CleanArchitecture;
-
-use InvalidArgumentException;
+namespace CleanArchitecture\Domain;
 
 class Email
 {
@@ -15,7 +13,7 @@ class Email
     private function setEmail($email): void
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false)
-            throw new InvalidArgumentException("E-mail is invalid");
+            throw new \InvalidArgumentException("E-mail is invalid");
         $this->email = $email;
     }
 

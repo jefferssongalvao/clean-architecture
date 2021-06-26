@@ -4,6 +4,7 @@ namespace CleanArchitecture\Tests\Integration;
 
 use CleanArchitecture\Domain\CPF;
 use CleanArchitecture\Domain\Student\Student;
+use CleanArchitecture\Domain\Student\StudentNotFoundException;
 use CleanArchitecture\Infrastructure\Student\StudentRepositoryPDO;
 use PHPUnit\Framework\TestCase;
 
@@ -78,6 +79,19 @@ class StudentRepositoryTest extends TestCase
         self::assertCount(2, $students);
         self::assertEquals($student1, $students[$cpf1]);
         self::assertEquals($student2, $students[$cpf2]);
+    }
+
+    public function testCaseNoHasStudentWithCertainCPFThrowAnException(): void
+    {
+        $cpf = "12345678909";
+        $this->expectException(StudentNotFoundException::class);
+        $this->studentRepository->searchByCPF(new CPF($cpf));
+    }
+
+    public function testCaseNoHasStudentThrowAnException(): void
+    {
+        $this->expectException(StudentNotFoundException::class);
+        $this->studentRepository->searchAll();
     }
 
     protected function tearDown(): void

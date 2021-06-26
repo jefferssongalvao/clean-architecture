@@ -6,8 +6,8 @@ use CleanArchitecture\Domain\CPF;
 
 class StudentNotFoundException extends \DomainException
 {
-    public function __construct(CPF $cpf)
+    public function __construct()
     {
-        parent::__construct("Student with CPF $cpf not found");
+        parent::__construct("There is no student");
     }
 }

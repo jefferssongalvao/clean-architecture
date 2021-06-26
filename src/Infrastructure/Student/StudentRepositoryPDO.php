@@ -49,7 +49,7 @@ class StudentRepositoryPDO implements StudentRepositoryInterface
 
         $studentData = $statement->fetchAll(\PDO::FETCH_ASSOC);
         if (count($studentData) === 0) {
-            throw new StudentNotFoundException($cpf);
+            throw new StudentNotFoundException();
         }
 
         return $this->toMapStudent($studentData);
@@ -64,6 +64,11 @@ class StudentRepositoryPDO implements StudentRepositoryInterface
         $statement = $this->connection->query($sql);
 
         $studentDataList = $statement->fetchAll(\PDO::FETCH_ASSOC);
+
+        if (count($studentDataList) === 0) {
+            throw new StudentNotFoundException();
+        }
+
         /** @var Student[] $students */
         $students = [];
         foreach ($studentDataList as $studentData) {

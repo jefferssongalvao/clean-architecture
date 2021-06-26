@@ -2,15 +2,14 @@
 
 namespace CleanArchitecture\Tests\Unit;
 
-use CleanArchitecture\CPF;
-use InvalidArgumentException;
+use CleanArchitecture\Domain\CPF;
 use PHPUnit\Framework\TestCase;
 
 class CpfTest extends TestCase
 {
     public function testInvalidCPFThrowsException(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         new CPF("12345678900");
     }
 

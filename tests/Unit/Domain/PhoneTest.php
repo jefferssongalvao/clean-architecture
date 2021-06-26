@@ -2,8 +2,7 @@
 
 namespace CleanArchitecture\Tests\Unit;
 
-use CleanArchitecture\Phone;
-use InvalidArgumentException;
+use CleanArchitecture\Domain\Phone;
 use PHPUnit\Framework\TestCase;
 
 class PhoneTest extends TestCase
@@ -22,19 +21,19 @@ class PhoneTest extends TestCase
 
     public function testPhoneWithInvalidDDDThrowException(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         new Phone("ddd", "999999999");
     }
 
     public function testPhoneWithBigNumberThrowException(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         new Phone("61", "9999999999");
     }
 
     public function testPhoneWithSmallNumberThrowException(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         new Phone("61", "9999999");
     }
 }

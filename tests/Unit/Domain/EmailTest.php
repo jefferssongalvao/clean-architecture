@@ -2,15 +2,14 @@
 
 namespace CleanArchitecture\Tests\Unit;
 
-use CleanArchitecture\Email;
-use InvalidArgumentException;
+use CleanArchitecture\Domain\Email;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase
 {
     public function testInvalidEmailThrowsException(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         new Email("email invalid");
     }
 

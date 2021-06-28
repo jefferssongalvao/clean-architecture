@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Domain;
+namespace CleanArchitecture\Domain\Ordinary;
 
 class Phone
 {

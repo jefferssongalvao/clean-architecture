@@ -1,8 +1,8 @@
 <?php
 
-namespace CleanArchitecture\Tests\Unit;
+namespace CleanArchitecture\Tests\Unit\Domain\Ordinary;
 
-use CleanArchitecture\Domain\Email;
+use CleanArchitecture\Domain\Ordinary\Email;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase

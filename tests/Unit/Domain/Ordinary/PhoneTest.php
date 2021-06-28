@@ -1,8 +1,8 @@
 <?php
 
-namespace CleanArchitecture\Tests\Unit;
+namespace CleanArchitecture\Tests\Unit\Domain\Ordinary;
 
-use CleanArchitecture\Domain\Phone;
+use CleanArchitecture\Domain\Ordinary\Phone;
 use PHPUnit\Framework\TestCase;
 
 class PhoneTest extends TestCase

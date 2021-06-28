@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture\Domain\Password;
 
-use CleanArchitecture\Infrastructure\StringEncryptorDefault;
+use CleanArchitecture\Infrastructure\StringEncryptor\StringEncryptorDefault;
 
 class Password
 {

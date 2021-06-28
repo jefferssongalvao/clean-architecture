@@ -1,8 +1,8 @@
 <?php
 
-namespace CleanArchitecture\Tests\Unit;
+namespace CleanArchitecture\Tests\Unit\Domain\Ordinary;
 
-use CleanArchitecture\Domain\CPF;
+use CleanArchitecture\Domain\Ordinary\CPF;
 use PHPUnit\Framework\TestCase;
 
 class CpfTest extends TestCase
@@ -13,7 +13,7 @@ class CpfTest extends TestCase
         new CPF("12345678900");
     }
 
-    public function testValidCPFAsString(): void
+    public function testValidCpfAsString(): void
     {
         $cpf = new CPF("123.456.789-09");
         self::assertEquals("123.456.789-09", (string) $cpf);

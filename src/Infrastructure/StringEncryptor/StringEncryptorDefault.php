@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Infrastructure;
+namespace CleanArchitecture\Infrastructure\StringEncryptor;
 
 use CleanArchitecture\Domain\StringEncryptorInterface;
 

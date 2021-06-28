@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture\Domain\Student;
 
-use CleanArchitecture\Domain\CPF;
+use CleanArchitecture\Domain\Ordinary\CPF;
 
 interface StudentRepositoryInterface
 {

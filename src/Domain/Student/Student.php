@@ -2,11 +2,10 @@
 
 namespace CleanArchitecture\Domain\Student;
 
-use CleanArchitecture\Domain\CPF;
-use CleanArchitecture\Domain\Email;
+use CleanArchitecture\Domain\Ordinary\CPF;
+use CleanArchitecture\Domain\Ordinary\Email;
 use CleanArchitecture\Domain\Password\Password;
-use CleanArchitecture\Domain\Phone;
-use CleanArchitecture\Infrastructure\StringEncryptorDefault;
+use CleanArchitecture\Domain\Ordinary\Phone;
 
 class Student
 {

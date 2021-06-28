@@ -1,8 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Domain\Student;
-
-use CleanArchitecture\Domain\CPF;
+namespace CleanArchitecture\Domain\Student\Exceptions;
 
 class StudentNotFoundException extends \DomainException
 {

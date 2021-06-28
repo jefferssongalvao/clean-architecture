@@ -2,10 +2,10 @@
 
 namespace CleanArchitecture\Infrastructure\Student;
 
-use CleanArchitecture\Domain\CPF;
-use CleanArchitecture\Domain\Phone;
+use CleanArchitecture\Domain\Ordinary\CPF;
+use CleanArchitecture\Domain\Ordinary\Phone;
+use CleanArchitecture\Domain\Student\Exceptions\StudentNotFoundException;
 use CleanArchitecture\Domain\Student\Student;
-use CleanArchitecture\Domain\Student\StudentNotFoundException;
 use CleanArchitecture\Domain\Student\StudentRepositoryInterface;
 
 class StudentRepositoryPDO implements StudentRepositoryInterface

@@ -2,10 +2,10 @@
 
 namespace CleanArchitecture\Tests\Unit\Application;
 
-use CleanArchitecture\Application\Student\EnrollStudent\EnrollStudent;
-use CleanArchitecture\Application\Student\EnrollStudent\EnrollStudentCommand;
-use CleanArchitecture\Domain\Ordinary\CPF;
-use CleanArchitecture\Infrastructure\Student\StudentRepositoryMemory;
+use CleanArchitecture\Academic\Application\Student\EnrollStudent\EnrollStudent;
+use CleanArchitecture\Academic\Application\Student\EnrollStudent\EnrollStudentCommand;
+use CleanArchitecture\Academic\Domain\Ordinary\CPF;
+use CleanArchitecture\Academic\Infrastructure\Student\StudentRepositoryMemory;
 use PHPUnit\Framework\TestCase;
 
 class EnrollStudentTest extends TestCase

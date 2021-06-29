@@ -2,8 +2,8 @@
 
 namespace CleanArchitecture\Tests\Unit\Student;
 
-use CleanArchitecture\Domain\Student\Exceptions\MaximumPhonesNumberExceededException;
-use CleanArchitecture\Domain\Student\Student;
+use CleanArchitecture\Academic\Domain\Student\Exceptions\MaximumPhonesNumberExceededException;
+use CleanArchitecture\Academic\Domain\Student\Student;
 use PHPUnit\Framework\TestCase;
 
 class StudentTest extends TestCase

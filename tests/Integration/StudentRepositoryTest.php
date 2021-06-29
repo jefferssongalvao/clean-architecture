@@ -2,10 +2,10 @@
 
 namespace CleanArchitecture\Tests\Integration;
 
-use CleanArchitecture\Domain\Ordinary\CPF;
-use CleanArchitecture\Domain\Student\Exceptions\StudentNotFoundException;
-use CleanArchitecture\Domain\Student\Student;
-use CleanArchitecture\Infrastructure\Student\StudentRepositoryPDO;
+use CleanArchitecture\Academic\Domain\Ordinary\CPF;
+use CleanArchitecture\Academic\Domain\Student\Exceptions\StudentNotFoundException;
+use CleanArchitecture\Academic\Domain\Student\Student;
+use CleanArchitecture\Academic\Infrastructure\Student\StudentRepositoryPDO;
 use PHPUnit\Framework\TestCase;
 
 class StudentRepositoryTest extends TestCase

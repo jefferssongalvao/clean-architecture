@@ -6,6 +6,7 @@ use CleanArchitecture\Domain\Ordinary\CPF;
 use CleanArchitecture\Domain\Ordinary\Email;
 use CleanArchitecture\Domain\Password\Password;
 use CleanArchitecture\Domain\Ordinary\Phone;
+use CleanArchitecture\Domain\Student\Exceptions\MaximumPhonesNumberExceededException;
 
 class Student
 {
@@ -37,6 +38,10 @@ class Student
 
     public function addPhone(string $ddd, string $number): self
     {
+        if (count($this->phones()) === 2) {
+            throw new MaximumPhonesNumberExceededException();
+        }
+
         $this->phones[] = new Phone($ddd, $number);
         return $this;
     }

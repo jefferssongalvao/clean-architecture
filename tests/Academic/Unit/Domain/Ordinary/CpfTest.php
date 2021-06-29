@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture\Tests\Academic\Unit\Domain\Ordinary;
 
-use CleanArchitecture\Academic\Domain\Ordinary\CPF;
+use CleanArchitecture\Shared\Domain\CPF\CPF;
 use PHPUnit\Framework\TestCase;
 
 class CpfTest extends TestCase

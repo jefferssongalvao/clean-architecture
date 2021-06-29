@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Academic\Domain\Ordinary;
+namespace CleanArchitecture\Shared\Domain\CPF;
 
 class CPF
 {

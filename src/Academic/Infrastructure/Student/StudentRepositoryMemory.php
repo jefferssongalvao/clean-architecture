@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture\Academic\Infrastructure\Student;
 
-use CleanArchitecture\Academic\Domain\Ordinary\CPF;
+use CleanArchitecture\Shared\Domain\CPF\CPF;
 use CleanArchitecture\Academic\Domain\Student\Exceptions\StudentNotFoundException;
 use CleanArchitecture\Academic\Domain\Student\Student;
 use CleanArchitecture\Academic\Domain\Student\StudentRepositoryInterface;

@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture\Academic\Domain\Student;
 
-use CleanArchitecture\Academic\Domain\Ordinary\CPF;
+use CleanArchitecture\Shared\Domain\CPF\CPF;
 use CleanArchitecture\Academic\Domain\Ordinary\Email;
 use CleanArchitecture\Academic\Domain\Password\Password;
 use CleanArchitecture\Academic\Domain\Ordinary\Phone;

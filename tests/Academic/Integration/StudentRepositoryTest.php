@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Tests\Integration;
+namespace CleanArchitecture\Tests\Academic\Integration;
 
 use CleanArchitecture\Academic\Domain\Ordinary\CPF;
 use CleanArchitecture\Academic\Domain\Student\Exceptions\StudentNotFoundException;

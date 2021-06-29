@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Tests\Unit\Student;
+namespace CleanArchitecture\Tests\Academic\Unit\Domain\Student;
 
 use CleanArchitecture\Academic\Domain\Student\Exceptions\MaximumPhonesNumberExceededException;
 use CleanArchitecture\Academic\Domain\Student\Student;

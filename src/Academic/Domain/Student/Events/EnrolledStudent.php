@@ -3,7 +3,7 @@
 namespace CleanArchitecture\Academic\Domain\Student\Events;
 
 use CleanArchitecture\Shared\Domain\CPF\CPF;
-use CleanArchitecture\Academic\Domain\Ordinary\Events\Event;
+use CleanArchitecture\Shared\Domain\Events\Event;
 
 class EnrolledStudent implements Event
 {

@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture\Academic\Infrastructure\StringEncryptor;
 
-use CleanArchitecture\Academic\Domain\StringEncryptorInterface;
+use CleanArchitecture\Academic\Domain\StringEncryptor\StringEncryptorInterface;
 
 class StringEncryptorMd5 implements StringEncryptorInterface
 {

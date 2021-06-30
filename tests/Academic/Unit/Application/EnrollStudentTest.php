@@ -4,10 +4,10 @@ namespace CleanArchitecture\Tests\Academic\Unit\Application;
 
 use CleanArchitecture\Academic\Application\Student\EnrollStudent\EnrollStudent;
 use CleanArchitecture\Academic\Application\Student\EnrollStudent\EnrollStudentCommand;
-use CleanArchitecture\Shared\Domain\CPF\CPF;
-use CleanArchitecture\Academic\Domain\Ordinary\Events\EventPublisher;
 use CleanArchitecture\Academic\Domain\Student\Log\EnrolledStudentLog;
+use CleanArchitecture\Shared\Domain\CPF\CPF;
 use CleanArchitecture\Academic\Infrastructure\Student\StudentRepositoryMemory;
+use CleanArchitecture\Shared\Domain\Events\EventPublisher;
 use PHPUnit\Framework\TestCase;
 
 class EnrollStudentTest extends TestCase

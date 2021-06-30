@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Academic\Domain\Ordinary\Events;
+namespace CleanArchitecture\Shared\Domain\Events;
 
 class EventPublisher
 {

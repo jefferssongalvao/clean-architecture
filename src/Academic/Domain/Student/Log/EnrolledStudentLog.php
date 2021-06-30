@@ -2,9 +2,9 @@
 
 namespace CleanArchitecture\Academic\Domain\Student\Log;
 
-use CleanArchitecture\Academic\Domain\Ordinary\Events\Event;
-use CleanArchitecture\Academic\Domain\Ordinary\Events\EventListener;
 use CleanArchitecture\Academic\Domain\Student\Events\EnrolledStudent;
+use CleanArchitecture\Shared\Domain\Events\Event;
+use CleanArchitecture\Shared\Domain\Events\EventListener;
 
 class EnrolledStudentLog extends EventListener
 {

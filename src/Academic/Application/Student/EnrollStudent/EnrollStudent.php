@@ -2,10 +2,10 @@
 
 namespace CleanArchitecture\Academic\Application\Student\EnrollStudent;
 
-use CleanArchitecture\Academic\Domain\Ordinary\Events\EventPublisher;
 use CleanArchitecture\Academic\Domain\Student\Events\EnrolledStudent;
 use CleanArchitecture\Academic\Domain\Student\Student;
 use CleanArchitecture\Academic\Domain\Student\StudentRepositoryInterface;
+use CleanArchitecture\Shared\Domain\Events\EventPublisher;
 
 class EnrollStudent
 {

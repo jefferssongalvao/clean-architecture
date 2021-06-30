@@ -32,9 +32,8 @@ class EnrollStudentTest extends TestCase
 
         $enrollStudent->execute($dataStudent);
 
-
-
         $student = $studentRepository->searchByCPF(new CPF($dataStudent->cpf()));
+
         self::assertSame("New Student", (string) $student->name());
         self::assertSame("student@example.com", (string) $student->email());
         self::assertEmpty($student->phones());

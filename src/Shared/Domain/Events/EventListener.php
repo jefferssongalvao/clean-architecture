@@ -4,13 +4,13 @@ namespace CleanArchitecture\Shared\Domain\Events;
 
 abstract class EventListener
 {
-    public function process(Event $event): void
+    public function process(EventInterface $event): void
     {
         if ($this->knowHowToProcess($event)) {
             $this->reactTo($event);
         }
     }
 
-    abstract public function knowHowToProcess(Event $event): bool;
-    abstract public function reactTo(Event $event): void;
+    abstract protected function knowHowToProcess(EventInterface $event): bool;
+    abstract protected function reactTo(EventInterface $event): void;
 }

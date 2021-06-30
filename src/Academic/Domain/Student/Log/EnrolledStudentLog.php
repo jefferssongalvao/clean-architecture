@@ -3,13 +3,13 @@
 namespace CleanArchitecture\Academic\Domain\Student\Log;
 
 use CleanArchitecture\Academic\Domain\Student\Events\EnrolledStudent;
-use CleanArchitecture\Shared\Domain\Events\Event;
+use CleanArchitecture\Shared\Domain\Events\EventInterface;
 use CleanArchitecture\Shared\Domain\Events\EventListener;
 
 class EnrolledStudentLog extends EventListener
 {
     /** @param EnrolledStudent $enrolledStudent */
-    public function reactTo(Event $enrolledStudent): void
+    protected function reactTo(EventInterface $enrolledStudent): void
     {
         fprintf(
             STDERR,
@@ -19,8 +19,8 @@ class EnrolledStudentLog extends EventListener
         );
     }
 
-    public function knowHowToProcess(Event $event): bool
+    protected function knowHowToProcess(EventInterface $event): bool
     {
-        return $event instanceof EnrolledStudent;
+        return $event->eventName() === "EnrolledStudent";
     }
 }

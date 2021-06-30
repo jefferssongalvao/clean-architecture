@@ -19,4 +19,10 @@ class SealRepositoryMemory implements SealRepositoryInterface
     {
         return array_filter($this->seals, fn (Seal $seal) => $seal->cpf() == $cpf);
     }
+
+    /** @return Seal[] */
+    public function seals(): array
+    {
+        return $this->seals;
+    }
 }

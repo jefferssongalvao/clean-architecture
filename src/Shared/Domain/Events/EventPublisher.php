@@ -12,7 +12,7 @@ class EventPublisher
         $this->listeners[] = $eventListener;
     }
 
-    public function publish(Event $event): void
+    public function publish(EventInterface $event): void
     {
         foreach ($this->listeners as $listener) {
             $listener->process($event);

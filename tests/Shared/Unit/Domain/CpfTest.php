@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Tests\Academic\Unit\Domain\Ordinary;
+namespace CleanArchitecture\Tests\Shared\Unit\Domain;
 
 use CleanArchitecture\Shared\Domain\CPF\CPF;
 use PHPUnit\Framework\TestCase;
